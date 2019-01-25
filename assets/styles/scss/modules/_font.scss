@@ -1,0 +1,148 @@
+// Setup
+
+* {
+    font-family: $font-familly-base;
+    font-weight: $font-weight-regular;
+    color: $color-base;
+}
+
+// Headers
+h1 {
+    font-size: $font-size-mobile-h1;
+    color: $color-h1;
+    font-weight: $font-weight-regular;
+    font-family: $font-familly-header;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: $font-size-mobile-h2;
+    color: $color-h2;
+    font-weight: $font-weight-regular;
+    font-family: $font-familly-header;
+    text-transform: uppercase;
+    line-height: 1.15;
+
+}
+
+h3 {
+    font-size: $font-size-mobile-h3;
+    color: $color-acc;
+    font-weight: $font-weight-bold;
+    font-family: $font-familly-base;
+    text-transform: uppercase;
+}
+
+// Others
+p {
+    font-size: $font-size-mobile-p;
+    font-family: $font-familly-base;
+    font-weight: $font-weight-regular;
+    color: $color-base;
+}
+
+a.link {
+    position: relative;
+    font-size: $font-size-mobile-p;
+    font-family: $font-familly-base;
+    font-weight: $font-weight-bold;
+    color: $color-h2;
+    text-decoration: none;
+    width: auto;
+    padding: 10px 0;
+    display: block;
+    cursor: pointer;
+}
+
+a.link::after {
+    content: '';
+    transition: width 0.3s ease-in-out;
+    width: 75px;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    border-bottom: solid 5px $color-acc;
+    margin: 0 auto;
+}
+
+a.link:hover,
+a.link:active {
+    &::after {
+        width: 125px;
+    }
+}
+
+button.hero-btn {
+    display: block;
+    font-weight: $font-weight-bold;
+    font-size: $btn-font-size-mobile;
+    background: $color-acc;
+    color: $color-h2;
+    width: 100%;
+    max-width: 400px;
+    height: 60px;
+    border: 0;
+    outline: 0;
+    box-shadow: 0px 3px 12px 0px rgba(255, 222, 3, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+button.hero-btn:hover,
+button.hero-btn:active {
+    box-shadow: 0px 3px 24px 0px rgba(255, 222, 3, 0.3);
+}
+
+@media (min-width: 992px) {
+    h1 {
+        font-size: $font-size-tablets-h1;
+    }
+
+    h2 {
+        font-size: $font-size-tablets-h2;
+    }
+
+    h3 {
+        font-size: $font-size-tablets-h3;
+    }
+
+    p {
+        font-size: $font-size-tablets-p;
+    }
+
+    a.link {
+        font-size: $font-size-tablets-p;
+    }
+
+    button.hero-btn {
+        font-size: $btn-font-size-tablets;
+    }
+}
+
+@media (min-width: 1600px) {
+    h1 {
+        font-size: $font-size-desktop-h1;
+    }
+
+    h2 {
+        font-size: $font-size-desktop-h2;
+    }
+
+    h3 {
+        font-size: $font-size-desktop-h3;
+    }
+
+    p {
+        font-size: $font-size-desktop-p;
+    }
+
+    a.link {
+        font-size: $font-size-desktop-p;
+    }
+
+    button.hero-btn {
+        font-size: $btn-font-size-desktop;
+    }
+}

@@ -1,0 +1,76 @@
+.hero {
+    width: 100%;
+    height: 667px;
+    overflow: hidden;
+    background-color: #43352C;
+    background-image: url('../../images/hero-background.png');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.hero p {
+    display: block;
+    max-width: 700px;
+    width: 100%;
+    color: #e0dedd;
+    margin: 10px 0 25px 0;
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero .scroll {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+
+.hero .scroll .container {
+    position: relative;
+}
+
+.hero .scroll a.scroll-link {
+    text-decoration: none;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%)
+}
+
+.hero .scroll a.scroll-link span {
+    color: #DFDBD9;
+    font-size: 21px;
+    margin-left: 20px;
+}
+
+
+
+@media (min-height: 667px) {
+    .hero {
+        height: 100vh;
+    }
+
+    .hero .scroll {
+        display: block;
+    }
+
+    .hero p {
+        margin: 20px 0 50px 0;
+    }
+
+}
+
+@media (min-height: 1080px) {
+    .hero {
+        height: 1080px;
+    }
+
+}

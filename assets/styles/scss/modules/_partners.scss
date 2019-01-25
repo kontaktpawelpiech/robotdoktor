@@ -1,0 +1,42 @@
+.companies {
+    width: 100%;
+    height: 320px;
+    background: #F9F9F9;
+}
+
+.companies .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.companies img {
+    opacity: 0.4;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.companies .pd {
+    display: none;
+}
+
+.companies .pm {
+    display: block;
+}
+
+@media (min-width: 1024px) {
+
+    .companies {
+        height: 400px;
+    }
+
+    .companies .pd {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .companies .pm {
+        display: none;
+    }
+}

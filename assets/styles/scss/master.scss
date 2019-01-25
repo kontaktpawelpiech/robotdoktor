@@ -1,0 +1,22 @@
+/**
+*
+*  @autor:  Paweł Piech
+*  @date:   22.01.2019
+*  @fonts:  fonts.google.com
+*  @images: pexels.com
+*  
+*/
+
+// Import fonts
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700|Staatliches&subset=latin-ext');
+ 
+// Modules
+@import 'modules/variables.scss';
+@import 'modules/utils.scss';  
+@import 'modules/font.scss';
+@import 'modules/navigation.scss';
+@import 'modules/hero.scss';
+@import 'modules/content.scss';
+@import 'modules/partners.scss';
+@import 'modules/footer.scss';
+@import 'modules/faq.scss';

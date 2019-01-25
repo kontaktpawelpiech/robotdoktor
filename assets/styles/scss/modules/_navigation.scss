@@ -1,0 +1,138 @@
+.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $nav-mobile-height;
+    background: $nav-top-color;
+    z-index: 1000;
+    border-top: solid 5px $color-acc;
+    transition: height 0.5s ease-in-out, background 0.2s ease-in-out;
+}
+
+.fake-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 0;
+    z-index: -1;
+}
+
+.nav .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.nav .logo {
+    position: absolute;
+    left: 0;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: color 0.5s ease-in-out;
+    font-size: 15px;
+}
+
+.nav .logo a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.5s ease-in-out;
+}
+
+.nav .logo span {
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 15px;
+    transition: color 0.5s ease-in-out;
+}
+
+.nav button {
+    display: block;
+    position: absolute;
+    left: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+.nav ul {
+    list-style: none;
+    position: absolute;
+    right: 0;
+    display: none;
+    flex-direction: row;
+}
+
+.nav ul a {
+    padding: 0 10px;
+}
+
+.nav ul a li,
+.nav ul a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.5s ease-in-out;
+    font-size: 15px;
+}
+
+
+@media (min-width: 768px) {
+    .nav {
+        height: $nav-tablet-height;
+    }
+
+    .fake-header {
+        height: 0;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .nav {
+        height: $nav-desktop-height;
+    }
+
+    .fake-header {
+        height: $nav-desktop-sticky-height;
+    }
+
+    .nav button {
+        display: none;
+    }
+
+    .nav .logo {
+        left: 0;
+        transform: translateY(0);
+    }
+
+    .nav ul {
+        display: flex;
+    }
+
+    .nav.sticky {
+        position: fixed;
+        background: $nav-top-sticky-color;
+        height: $nav-desktop-sticky-height;
+        box-shadow: 0px 3px 24px 0px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav.sticky .logo {
+        color: $color-h2;
+    }
+
+    .nav.nav.sticky .logo a {
+        color: $color-h2;
+    }
+
+    .nav.sticky .logo a span {
+        color: $color-h2;
+    }
+
+    .nav.nav.sticky ul a li,
+    .nav ul a {
+        color: $color-h2;
+    }
+
+}
